@@ -1,13 +1,13 @@
-<template>
+﻿<template>
   <div id="main"  >
   	<div class="totalNum">
   		<div>
   			<p>3</p>
-  			<p>借用单号数</p>
+  			<p>借用单号数</p> 
   		</div>
   		<div>
   			<p>4</p>
-  			<p>装备库存数</p>
+  			<p>装备库存数</p>  
   		</div>
   		<div>
   			<p>5</p>
