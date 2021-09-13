@@ -6,15 +6,15 @@ function resolve(dir) {
     return path.join(__dirname, dir)
 }
 
-const name = '警用装备管理系统222' // 标题
+const name = '管理系统' // 标题
 
 const port = process.env.port || process.env.npm_config_port || 80 // 端口
 
-// vue.config.js 配置说明
+// vue.config.js 配置说明 
 //官方vue.config.js 参考文档 https://cli.vuejs.org/zh/config/#css-loaderoptions
 // 这里只列一部分，具体配置参考文档
 module.exports = {
-    // 部署生产环境和开发环境下的URL。
+// 部署生产环境和开发环境下的URL。
     // 默认情况下，Vue CLI 会假设你的应用是被部署在一个域名的根路径上
     // 例如 https://www.ruoyi.vip/。如果应用被部署在一个子路径上，你就需要用这个选项指定这个子路径。例如，如果你的应用被部署在 https://www.ruoyi.vip/admin/，则设置 baseUrl 为 /admin/。
     publicPath: process.env.NODE_ENV === "production" ? "/" : "/",
@@ -34,10 +34,10 @@ module.exports = {
             // detail: https://cli.vuejs.org/config/#devserver-proxy
             [process.env.VUE_APP_BASE_API]: {
 
-               target: `http://192.168.50.151:10500/`,
+                target: `http://192.168.50.151:10500/`,
                 // target: 'http://192.168.9.145:10500/',
                 //  target: 'http://118.25.102.226:10500/',
-            //    target: `http://192.168.9.114:11001/`,
+                //    target: `http://192.168.9.114:11001/`,
                 changeOrigin: true,
                 pathRewrite: {
                     ['^' + process.env.VUE_APP_BASE_API]: ''
@@ -90,7 +90,7 @@ module.exports = {
         config
             // https://webpack.js.org/configuration/devtool/#development
             .when(process.env.NODE_ENV === 'development',
-                config => config.devtool('eval-source-map')
+                config => config.devtool('eval-source-map')   
             )
 
         config
@@ -128,7 +128,7 @@ module.exports = {
                                 }
                             }
                         })
-                    config.optimization.runtimeChunk('single')
+                    config.optimization.runtimeChunk('single'),
                 }
             )
     }
